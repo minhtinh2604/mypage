@@ -167,20 +167,20 @@ export default {
     this.create_product_by_category_array(this.current_category)
     this.initCategorySwiper()
 
-    // const ClipboardJS = require("clipboard")
-    // const bootstrap = require('bootstrap')
-    // const clipboard = new ClipboardJS('.btn-copy')
-    // clipboard.on('success', function(e) {
-    //     const exampleEl = document.getElementById('btn-tooltip')
-    //     const myTooltipEl = bootstrap.Tooltip.getOrCreateInstance(exampleEl)
-    //     exampleEl.addEventListener('show.bs.tooltip', () => {
-    //         setTimeout(function () {
-    //             myTooltipEl.hide()
-    //           }, 1000);
-    //     })
-    //     myTooltipEl.show()
-    //     e.clearSelection()
-    // })
+    const ClipboardJS = require("clipboard")
+    const bootstrap = require('bootstrap')
+    const clipboard = new ClipboardJS('.btn-copy')
+    clipboard.on('success', function(e) {
+        const exampleEl = document.getElementById('btn-tooltip')
+        const myTooltipEl = bootstrap.Tooltip.getOrCreateInstance(exampleEl)
+        exampleEl.addEventListener('show.bs.tooltip', () => {
+            setTimeout(function () {
+                myTooltipEl.hide()
+              }, 1000);
+        })
+        myTooltipEl.show()
+        e.clearSelection()
+    })
   },
   methods: {
     initCategorySwiper(){
