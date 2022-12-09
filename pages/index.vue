@@ -62,6 +62,9 @@ export default {
     },
     avatar_image (){
       return this.$store.getters['my_page/getAvatar']
+    },
+    cover_image (){
+      return this.$store.getters['my_page/getCover']
     }
   },
 
