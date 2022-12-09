@@ -34,13 +34,12 @@ export default {
       },
       title: this.title,
       meta: [
-        { hid: 'keywords', name: 'keywords', content: '' },
         { hid: 'description', name: 'description', content: this.description },
         { hid: 'og:title', property: 'og:title', content: this.title },
         { hid: 'og:description', property: 'og:description', content: this.description },
         { hid: 'og:site_name', property: 'og:site_name', content: this.title },
         { hid: 'og:type', property: 'og:type', content: 'website' },
-        { hid: 'og:image', property: 'og:image', content: '' }
+        { hid: 'og:image', property: 'og:image', content: this.avatar_image }
       ],
     }
   },
@@ -60,6 +59,9 @@ export default {
     },
     language () {
       return this.$store.getters['i18n/getLang']
+    },
+    avatar_image (){
+      return this.$store.getters['my_page/getAvatar']
     }
   },
 
