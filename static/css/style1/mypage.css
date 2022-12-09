@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+body{
+	background: #f2f3f7;
+	font-family: 'Roboto', sans-serif;
+}
+textarea:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus,
+.uneditable-input:focus {   
+  border-color: rgba(126, 55, 240, 0.8);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(126, 55, 240, 0.6);
+  outline: 0 none;
+}
+.mypage-wrapper{
+	max-width: 450px;
+}
+.form-control::placeholder {
+  color: rgba(126, 55, 240, 0.6);
+}
+.form-control:-ms-input-placeholder {
+  color: rgba(126, 55, 240, 0.6);
+}
+.form-control::-ms-input-placeholder {
+  color: rgba(126, 55, 240, 0.6);
+}
+input {
+    color: #44006b !important;
+}
+.mypage-profile .profile-title{
+	color: #570ccf;
+}
+.mypage-profile .profile-description{
+	color: #410157;
+}
+#input-search{
+	border-color: rgba(126, 55, 240, 0.8);
+}
+#button-search{
+	border-color: rgba(126, 55, 240, 0.8);
+	color: rgba(126, 55, 240, 0.8);
+}
+.search-wrapper .btn-outline-secondary:hover{
+	background-color: rgba(126, 55, 240, 0.8);
+}
+.search-wrapper .btn-outline-secondary:hover .bi-search{
+	color: #FFF;
+}
+.category .category-title{
+	color: #7400cc;
+}
+.btn-load-more-product{
+	color: #7400cc;
+}
+.product-wrapper .product-item .product-name{
+	color: #7400cc;
+}
+.product-wrapper .product-item .product-image{
+  outline: rgba(0, 0, 0, 0.16) solid 1px;
+}
+.copyright {
+	color: #44006b;
+}
+.not-found-product{
+	color: #44006b;
+}
+.page-not-found{
+	color: #44006b;
+}

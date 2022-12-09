@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito&display=swap');
+body{
+	font-family: 'Nunito', 'Roboto', sans-serif;
+}
+textarea:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus,
+.uneditable-input:focus {   
+  border-color: rgba(252, 137, 5, 0.8);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(252, 137, 5, 0.6);
+  outline: 0 none;
+}
+.form-control::placeholder {
+  color: rgba(252, 137, 5, 0.6);
+}
+.form-control:-ms-input-placeholder {
+  color: rgba(252, 137, 5, 0.6);
+}
+.form-control::-ms-input-placeholder {
+  color: rgba(252, 137, 5, 0.6);
+}
+input {
+    color: #fc8905 !important;
+}
+.mypage-profile .profile-title{
+	color: #e67b02;
+}
+.mypage-profile .profile-description{
+	color: #fc8905;
+}
+#input-search{
+	border-color: rgba(252, 137, 5, 0.8);
+}
+#button-search{
+	border-color: rgba(252, 137, 5, 0.8);
+	color: rgba(252, 137, 5, 0.8);
+}
+.search-wrapper .btn-outline-secondary:hover{
+	background-color: rgba(252, 137, 5, 0.8);
+}
+.search-wrapper .btn-outline-secondary:hover .bi-search{
+	color: #FFF;
+}
+.category .category-title{
+	color: #e67b02;
+}
+.btn-load-more-product{
+	color: #e67b02;
+}
+.product-wrapper .product-item .product-name{
+	color: #fc8905;
+}
+.product-wrapper .product-item .product-image{
+  outline: rgba(0, 0, 0, 0.16) solid 1px;
+}
+.copyright {
+	color: #fc8905;
+}
+.not-found-product{
+	color: #fc8905;
+}
+.page-not-found{
+	color: #fc8905;
+}
