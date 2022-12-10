@@ -9,6 +9,7 @@ body{
 }
 .mypage-wrapper{
 	margin: auto;
+	max-width: 450px;
 	background-color: #FFF;
 	padding: 1rem;
 	position: relative;

@@ -92,6 +92,8 @@ const actions = {
               break;
         }
         commit('SET_MYPAGE_LAYOUT', layout)
+      }else{
+        return false
       }
     }
   },
