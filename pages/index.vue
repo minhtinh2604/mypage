@@ -71,10 +71,12 @@ export default {
   mounted(){
     this.show_spinner = true
     this.$i18n.locale = this.language
-    const css_link  = document.createElement('link');
-    css_link.href = '/css/'+ this.page_template + '/mypage.css';
-    css_link.rel  = 'stylesheet'; css_link.type = 'text/css'; css_link.media = 'all';
-    document.getElementsByTagName('head')[0].appendChild(css_link);
+    if (this.page_template){
+      const css_link  = document.createElement('link');
+      css_link.href = '/css/'+ this.page_template + '/mypage.css';
+      css_link.rel  = 'stylesheet'; css_link.type = 'text/css'; css_link.media = 'all';
+      document.getElementsByTagName('head')[0].appendChild(css_link);
+    }
     this.show_spinner = false
   },
   methods: {

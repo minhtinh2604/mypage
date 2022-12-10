@@ -44,8 +44,9 @@ const actions = {
   async getMyPageData({ commit, dispatch }, payload){
     const response = await this.$repositories.mypage.get(payload.subdomain, payload.mock_api)
     if (response.status === 200) {
-        const data = response.data.mypage
-        if (!data) return this.$router.push('404')
+      let data = []
+      if ('mypage' in response.data) {
+        data = response.data.mypage
         const template = data.profile.template
         let cover = '/img/' + template + '/background.webp'
         if (data.profile.background !== null && data.profile.background !== ''){
@@ -91,6 +92,7 @@ const actions = {
               break;
         }
         commit('SET_MYPAGE_LAYOUT', layout)
+      }
     }
   },
   setMyPageDomain({ commit }, data){
