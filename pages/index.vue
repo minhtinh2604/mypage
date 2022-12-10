@@ -19,8 +19,8 @@ export default {
       'Layout2Index': () => import('@/components/Layout2/Index.vue')
   },
 
-  async asyncData({ store, req }){
-    await store.dispatch('my_page/getMyPageData', store.getters['my_page/getMyPageDomain']) 
+  async asyncData({ store, req , route, params }){
+    await store.dispatch('my_page/getMyPageData', { 'subdomain': store.getters['my_page/getMyPageDomain'], 'mock_api': route.query.mock_api }) 
   },
 
   data: () => ({

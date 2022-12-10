@@ -41,10 +41,11 @@ const mutations = {
 }
 
 const actions = {
-  async getMyPageData({ commit, dispatch }, subdomain){
-    const response = await this.$repositories.mypage.get(subdomain)
+  async getMyPageData({ commit, dispatch }, payload){
+    const response = await this.$repositories.mypage.get(payload.subdomain, payload.mock_api)
     if (response.status === 200) {
         const data = response.data.mypage
+        if (!data) return this.$router.push('404')
         const template = data.profile.template
         let cover = '/img/' + template + '/background.webp'
         if (data.profile.background !== null && data.profile.background !== ''){
