@@ -14,8 +14,6 @@ export default {
       { rel: 'dns-prefetch', href: 'https://cdn.jsdelivr.net' },
       { rel: 'dns-prefetch', href: 'https://fonts.googleapis.com' },
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      // { rel: 'stylesheet', type: 'text/css', href: 'https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css', crossorigin: 'anonymous' },
-      // { rel: 'stylesheet', type: 'text/css', href: 'https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css' },
     ],
     script: [
     ],
@@ -48,6 +46,7 @@ export default {
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
     'nuxt-lazy-load',
+    'cookie-universal-nuxt',
   ],
   
   // Axios module configuration: https://go.nuxtjs.dev/config-axios

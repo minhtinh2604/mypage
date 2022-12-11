@@ -19,9 +19,9 @@ export default {
       'Layout2Index': () => import('@/components/Layout2/Index.vue')
   },
 
-  async asyncData({ store, req, route, params, error }){
+  async asyncData({ store, req, route, redirect }){
     const res = await store.dispatch('my_page/getMyPageData', { 'subdomain': store.getters['my_page/getMyPageDomain'], 'mock_api': route.query.mock_api }) 
-    if (res === false){ error({ statusCode: 404, message: 'Post not found' }) }
+    if (res === false){ redirect('/404') }
   },
 
   data: () => ({
@@ -72,6 +72,7 @@ export default {
   mounted(){
     this.show_spinner = true
     this.$i18n.locale = this.language
+    this.$cookies.set('locale', this.language)
     if (this.page_template){
       const css_link  = document.createElement('link');
       css_link.href = '/css/'+ this.page_template + '/mypage.css';

@@ -17,5 +17,8 @@ export default {
   name: 'ErrorPage',
   layout: 'error',
   props: ['error'],
+  mounted () {
+    this.$i18n.locale = this.$cookies.get('locale')
+  }
 }
 </script>
