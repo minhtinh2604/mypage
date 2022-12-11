@@ -102,7 +102,7 @@
     </div>
     <!-- Footer -->
     <div class="copyright">
-      © 2022 - Rentracks
+      © {{ (new Date()).getFullYear() }} - Rentracks
     </div>
   </div>
 </template>
