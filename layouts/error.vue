@@ -18,7 +18,7 @@ export default {
   layout: 'error',
   props: ['error'],
   mounted () {
-    this.$i18n.locale = this.$cookies.get('locale')
+    // this.$i18n.locale = this.$cookies.get('locale')
   }
 }
 </script>

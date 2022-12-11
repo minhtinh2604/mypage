@@ -19,9 +19,9 @@ export default {
       'Layout2Index': () => import('@/components/Layout2/Index.vue')
   },
 
-  async asyncData({ store, req, route, redirect }){
+  async asyncData({ store, req, route, error }){
     const res = await store.dispatch('my_page/getMyPageData', { 'subdomain': store.getters['my_page/getMyPageDomain'], 'mock_api': route.query.mock_api }) 
-    if (res === false){ redirect('/404') }
+    if (res === false){  error({ statusCode: 404, message: 'Page not found' }) }
   },
 
   data: () => ({
