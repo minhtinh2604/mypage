@@ -72,7 +72,6 @@ export default {
   mounted(){
     this.show_spinner = true
     this.$i18n.locale = this.language
-    this.$cookies.set('locale', this.language)
     if (this.page_template){
       const css_link  = document.createElement('link');
       css_link.href = '/css/'+ this.page_template + '/mypage.css';

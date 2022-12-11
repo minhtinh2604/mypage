@@ -2,7 +2,7 @@
   <div class="container lp-container">
     <div class="mypage-wrapper">
       <div v-if="error.statusCode === 404" class="text-center page-not-found mt-1">
-        {{ $t('not_found') }}
+        {{ $t('not_found') }} 
       </div>
     </div>
     <!-- Footer -->
@@ -18,7 +18,7 @@ export default {
   layout: 'error',
   props: ['error'],
   mounted () {
-    // this.$i18n.locale = this.$cookies.get('locale')
+    this.$i18n.locale = this.$cookies.get('locale')
   }
 }
 </script>

@@ -20,6 +20,7 @@ const mutations = {
     if (state.locales.includes(lang)) {
       state.locale = lang
       this.app.i18n.locale = lang
+      this.app.$cookies.set('locale', lang)
     }
   },
 }
