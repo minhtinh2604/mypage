@@ -22,7 +22,6 @@
     "clipboard": "^2.0.11",
     "cookie-universal-nuxt": "^2.2.2",
     "core-js": "^3.25.3",
-    "js-cookie": "^3.0.1",
     "nuxt": "^2.15.8",
     "nuxt-lazy-load": "^1.2.9",
     "swiper": "^8.4.5",

@@ -16,11 +16,11 @@ const mutations = {
   SET_LOCALES(state) {
     state.locales = getSupportedLocale()
   },
-  SET_LANG(state, lang) {
-    if (state.locales.includes(lang)) {
-      state.locale = lang
-      this.app.i18n.locale = lang
-      this.app.$cookies.set('locale', lang)
+  SET_LANG(state, value) {
+    if (state.locales.includes(value)) {
+      state.locale = value
+      this.app.i18n.locale = value
+      this.app.$cookies.set('locale', value)
     }
   },
 }

@@ -26,17 +26,17 @@ const mutations = {
     state.tiktok_url = payload.tiktok_url
     state.product_placeholder = payload.product_placeholder   
   },
-  SET_PRODUCT_ITEMS(state, product) {
-    state.product_items = product
+  SET_PRODUCT_ITEMS(state, value) {
+    state.product_items = value
   },
-  SET_CATEGORY_ARRAY(state, data){
-    state.category_array = data
+  SET_CATEGORY_ARRAY(state, value){
+    state.category_array = value
   },
-  SET_MYPAGE_DOMAIN(state, data){
-    state.mypage_domain = data
+  SET_MYPAGE_DOMAIN(state, value){
+    state.mypage_domain = value
   },
-  SET_MYPAGE_LAYOUT(state, data){
-    state.page_layout = data
+  SET_MYPAGE_LAYOUT(state, value){
+    state.page_layout = value
   }
 }
 
@@ -97,8 +97,8 @@ const actions = {
       }
     }
   },
-  setMyPageDomain({ commit }, data){
-    commit('SET_MYPAGE_DOMAIN', data)
+  setMyPageDomain({ commit }, value){
+    commit('SET_MYPAGE_DOMAIN', value)
   }
 }
 
