@@ -61,12 +61,14 @@ export default {
   },
 
   publicRuntimeConfig: {
+    MOCK_API: process.env.MOCK_API,
     BASE_API: process.env.BASE_API,
     axios: {
       baseURL: process.env.BASE_API
     }
   },
   privateRuntimeConfig: {
+    MOCK_API: process.env.MOCK_API,
     BASE_API: process.env.BASE_API,
     axios: {
       baseURL: process.env.BASE_API
