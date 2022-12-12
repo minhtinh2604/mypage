@@ -13,6 +13,9 @@ export default ($axios) => ({
       // /v1/d47cb5eb-0126-420a-9eee-285dd0dc841b
       return $axios.get(mock_api + '?subdomain=' + subdomain, { 'baseURL': 'https://mocki.io' })
     }
+    if (process.env.MOCK_API) {
+      return $axios.get(process.env.MOCK_API + '?subdomain=' + subdomain, { 'baseURL': 'https://mocki.io' })
+    }
     return $axios.get('/mypage/get?subdomain=' + subdomain  + '&t=' + timestamp)
   }
 })
