@@ -1,6 +1,5 @@
 export default ($axios) => ({
   get(subdomain, mock_api) {
-    const timestamp = Date.now()
     if (mock_api) {
       // /v1/000a71d1-e7e2-44a7-88ce-73ec884a64ee
       // /v1/a6b37462-207a-4a85-b93e-0fd0d52feb1b
@@ -13,6 +12,6 @@ export default ($axios) => ({
       // /v1/d47cb5eb-0126-420a-9eee-285dd0dc841b
       return $axios.get(mock_api + '?subdomain=' + subdomain, { 'baseURL': 'https://mocki.io' })
     }
-    return $axios.get('/mypage/get?subdomain=' + subdomain  + '&t=' + timestamp)
+    return $axios.get('/mypage/get?subdomain=' + subdomain  + '&t=' + Date.now())
   }
 })
