@@ -22,7 +22,7 @@
       <!-- Search -->
       <div class="search-wrapper mt-3">
         <div class="input-group">
-            <input id="input-search" type="text" class="form-control rounded-pill rounded-end input-search" :placeholder="$t('search_placeholder')" aria-describedby="button-search" @keyup.enter="search_product" @keyup="input_search_change">
+            <input id="input-search" name="input-search" type="text" class="form-control rounded-pill rounded-end input-search" :placeholder="$t('search_placeholder')" aria-describedby="button-search" @keyup.enter="search_product" @keyup="input_search_change">
           <button 
             id="button-search" 
             class="btn btn-outline-secondary rounded-pill rounded-start px-3" 
