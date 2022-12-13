@@ -12,9 +12,9 @@
             <div class="profile-title">{{page_name}}</div>
             <div class="profile-description">{{page_description}}</div>
             <div class="profile-links">
-              <a v-if="facebook_url != null && facebook_url != ''" :href="facebook_url" target="_blank"><img class="link-icon" src="/img/facebook.svg" alt=""></a>
-              <a v-if="instagram_url != null && instagram_url != ''" :href="instagram_url" target="_blank"><img class="link-icon" src="/img/instagram.svg" alt=""></a>
-              <a v-if="tiktok_url != null && tiktok_url != ''" :href="tiktok_url" target="_blank"><img class="link-icon" src="/img/tiktok.svg" alt=""></a>
+              <a v-if="facebook_url != null && facebook_url != ''" :href="facebook_url" target="_blank"><img class="link-icon" src="/img/facebook.svg" alt="" aria-label="Facebook"></a>
+              <a v-if="instagram_url != null && instagram_url != ''" :href="instagram_url" target="_blank"><img class="link-icon" src="/img/instagram.svg" alt="" aria-label="Instagram"></a>
+              <a v-if="tiktok_url != null && tiktok_url != ''" :href="tiktok_url" target="_blank"><img class="link-icon" src="/img/tiktok.svg" alt="" aria-label="Tiktok"></a>
             </div>
           </div>
         </div>
