@@ -70,7 +70,18 @@ const actions = {
           product_placeholder: '/img/' + template + '/product-placeholder.jpg?v=' + this.$config.NUXT_APP_VERSION
         })
         if ('language' in data.profile && data.profile.language !== null && data.profile.language !== ''){
-          dispatch('i18n/setLang', data.profile.language.toLowerCase(), { root: true })
+          const language = data.profile.language.toLowerCase()
+          dispatch('i18n/setLang', language, { root: true })
+          let html_lang = 'en'
+          switch(language) {
+            case 'vn':
+              html_lang = 'vi'
+              break;
+            default :
+              html_lang = 'en'
+              break;
+          }
+          dispatch('basic/setHTMLLang', html_lang, { root: true })
         }
         let layout = 'Layout1Index'
         switch(template) {

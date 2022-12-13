@@ -29,7 +29,7 @@ export default {
   head() {
     return {
       htmlAttrs: {
-        lang: this.$store.getters['i18n/getLang'],
+        lang: this.html_language,
       },
       title: this.title,
       meta: [
@@ -60,6 +60,9 @@ export default {
     },
     language () {
       return this.$store.getters['i18n/getLang']
+    },
+    html_language () {
+      return this.$store.getters['basic/getHTMLLang']
     },
     avatar_image (){
       return this.$store.getters['my_page/getAvatar']
