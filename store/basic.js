@@ -7,7 +7,16 @@ const mutations = {
     state.baseURL = value
   },
   SET_HTML_LANG (state, value) {
-    state.htmlLang = value
+    let html_lang = 'en'
+    switch(value) {
+      case 'vn':
+        html_lang = 'vi'
+        break;
+      default:
+        html_lang = value
+        break;
+    }
+    state.htmlLang = html_lang
   }
 }
 const actions = {

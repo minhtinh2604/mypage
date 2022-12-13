@@ -16,7 +16,7 @@ export default {
       { rel: 'preconnect', href: 'https://cdn.jsdelivr.net' },
       { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
       { rel: 'dns-prefetch', href: 'https://cdn.jsdelivr.net' },
-      { rel: 'dns-prefetch', href: 'https://fonts.googleapis.com' },
+      { rel: 'dns-prefetch', href: 'https://fonts.googleapis.com' }
     ],
     script: [
     ],

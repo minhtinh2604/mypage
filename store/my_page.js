@@ -72,16 +72,7 @@ const actions = {
         if ('language' in data.profile && data.profile.language !== null && data.profile.language !== ''){
           const language = data.profile.language.toLowerCase()
           dispatch('i18n/setLang', language, { root: true })
-          let html_lang = 'en'
-          switch(language) {
-            case 'vn':
-              html_lang = 'vi'
-              break;
-            default :
-              html_lang = 'en'
-              break;
-          }
-          dispatch('basic/setHTMLLang', html_lang, { root: true })
+          dispatch('basic/setHTMLLang', language, { root: true })
         }
         let layout = 'Layout1Index'
         switch(template) {

@@ -3,6 +3,10 @@
         "show_all": "Xem tất cả",
         "no_results": "Không tìm thấy kết quả nào.",
         "not_found": "Không tìm thấy trang.",
+        "not_found_title": "Không tìm thấy trang",
+        "error": "Lỗi",
+        "internal_server_error": "Internal Server error",
+        "an_error_occur": "An error occurred",
         "others_category": "Khác",
         "all": "Tất cả"
 }

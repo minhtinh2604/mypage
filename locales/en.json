@@ -3,6 +3,10 @@
         "show_all": "Show all",
         "no_results": "No results.",
         "not_found": "Page not Found.",
+        "not_found_title": "Page not Found",
+        "error": "Error",
+        "internal_server_error": "Internal Server error",
+        "an_error_occur": "An error occurred",
         "others_category": "Others",
         "all": "All"
 }
