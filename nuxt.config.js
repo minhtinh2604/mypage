@@ -1,3 +1,7 @@
+var version = require('./package.json').version;
+const timestamp = Date.now()
+version = version + '.' + timestamp
+
 export default {
   ssr: true,
   target: 'server',
@@ -13,7 +17,6 @@ export default {
       { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
       { rel: 'dns-prefetch', href: 'https://cdn.jsdelivr.net' },
       { rel: 'dns-prefetch', href: 'https://fonts.googleapis.com' },
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
     ],
     script: [
     ],
@@ -61,12 +64,14 @@ export default {
   },
 
   publicRuntimeConfig: {
+    NUXT_APP_VERSION: version,
     BASE_API: process.env.BASE_API,
     axios: {
       baseURL: process.env.BASE_API
     }
   },
   privateRuntimeConfig: {
+    NUXT_APP_VERSION: version,
     BASE_API: process.env.BASE_API,
     axios: {
       baseURL: process.env.BASE_API

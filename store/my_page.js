@@ -48,11 +48,11 @@ const actions = {
       if ('mypage' in response.data) {
         data = response.data.mypage
         const template = data.profile.template
-        let cover = '/img/' + template + '/background.webp'
+        let cover = '/img/' + template + '/background.webp?v=' + this.$config.NUXT_APP_VERSION
         if (data.profile.background !== null && data.profile.background !== ''){
             cover = data.profile.background
         }
-        let avatar = '/img/' + template + '/avatar.webp'
+        let avatar = '/img/' + template + '/avatar.webp?v=' + this.$config.NUXT_APP_VERSION
         if (data.profile.avatar !== null && data.profile.avatar !== ''){
             avatar = data.profile.avatar
         }
@@ -67,7 +67,7 @@ const actions = {
           facebook_url: data.profile.facebook_url,
           instagram_url: data.profile.instagram_url,
           tiktok_url: data.profile.tiktok_url,
-          product_placeholder: '/img/' + template + '/product-placeholder.jpg'
+          product_placeholder: '/img/' + template + '/product-placeholder.jpg?v=' + this.$config.NUXT_APP_VERSION
         })
         if ('language' in data.profile && data.profile.language !== null && data.profile.language !== ''){
           dispatch('i18n/setLang', data.profile.language.toLowerCase(), { root: true })
