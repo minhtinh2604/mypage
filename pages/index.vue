@@ -33,6 +33,7 @@ export default {
       },
       title: this.title,
       meta: [
+        { name: 'robots', content: 'index, follow' },
         { rel: 'icon', type: 'image/x-icon', href: this.base_url + '/favicon.ico' },
         { hid: 'description', name: 'description', content: this.description },
         { hid: 'og:title', property: 'og:title', content: this.title },

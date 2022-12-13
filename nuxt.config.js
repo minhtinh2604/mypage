@@ -9,9 +9,8 @@ export default {
   head: {
     meta: [
       { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no' },
-      { name: 'format-detection', content: 'telephone=no' },
-      { name: 'robots', content: 'index, follow' }
+      { name: 'viewport', content: 'width=device-width, initial-scale=1.0, maximum-scale=1.0' },
+      { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [
       { rel: 'preconnect', href: 'https://cdn.jsdelivr.net' },

@@ -12,9 +12,9 @@
             <div class="profile-title">{{page_name}}</div>
             <div class="profile-description">{{page_description}}</div>
             <div class="profile-links">
-              <a v-if="facebook_url != null && facebook_url != ''" :href="facebook_url" target="_blank"><img class="link-icon" src="/img/facebook.svg"></a>
-              <a v-if="instagram_url != null && instagram_url != ''" :href="instagram_url" target="_blank"><img class="link-icon" src="/img/instagram.svg"></a>
-              <a v-if="tiktok_url != null && tiktok_url != ''" :href="tiktok_url" target="_blank"><img class="link-icon" src="/img/tiktok.svg"></a>
+              <a v-if="facebook_url != null && facebook_url != ''" :href="facebook_url" target="_blank"><img class="link-icon" src="/img/facebook.svg" alt=""></a>
+              <a v-if="instagram_url != null && instagram_url != ''" :href="instagram_url" target="_blank"><img class="link-icon" src="/img/instagram.svg" alt=""></a>
+              <a v-if="tiktok_url != null && tiktok_url != ''" :href="tiktok_url" target="_blank"><img class="link-icon" src="/img/tiktok.svg" alt=""></a>
             </div>
           </div>
         </div>
@@ -47,8 +47,8 @@
             >
               <a :href="product.affiliate_link" target="_blank">
                 <div>
-                  <img v-if="product.image_link != ''" v-lazy-load class="product-image" :data-src="product.image_link"/>
-                  <img v-else  v-lazy-load class="product-image" :data-src="product_placeholder"/>
+                  <img v-if="product.image_link != ''" v-lazy-load class="product-image" :data-src="product.image_link" alt=""/>
+                  <img v-else  v-lazy-load class="product-image" :data-src="product_placeholder" alt=""/>
                   <div class="product-name">
                     {{product.product_name}}
                   </div>
@@ -74,8 +74,8 @@
             >
               <a :href="product.affiliate_link" target="_blank">
                 <div>
-                  <img v-if="product.image_link != ''" v-lazy-load class="product-image" :data-src="product.image_link"/>
-                  <img v-else v-lazy-load class="product-image" :data-src="product_placeholder"/>
+                  <img v-if="product.image_link != ''" v-lazy-load class="product-image" :data-src="product.image_link" alt=""/>
+                  <img v-else v-lazy-load class="product-image" :data-src="product_placeholder" alt=""/>
                   <div class="product-name">
                     {{product.product_name}}
                   </div>
