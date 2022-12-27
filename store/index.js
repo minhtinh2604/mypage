@@ -9,7 +9,6 @@ const actions =  {
       commit('i18n/SET_LANG', locale, { root: true })
       commit('basic/SET_HTML_LANG', locale, { root: true })
     }
-    
   }
 }
 

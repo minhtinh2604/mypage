@@ -79,14 +79,64 @@ const actions = {
           case 'style1':
           case 'style2':
           case 'style3':
-          case 'style9':
               layout = 'Layout1Index'
               break;
           case 'style4':
           case 'style5':
-          case 'style6':
-          case 'style7':
-          case 'style8':
+              layout = 'Layout2Index'
+              break;
+          default:
+              layout = 'Layout1Index'
+              break;
+        }
+        commit('SET_MYPAGE_LAYOUT', layout)
+      }else{
+        return false
+      }
+    }
+  },
+  async getMyPageData_GAS({ commit, dispatch }, payload){
+    const response = await this.$repositories.mypage.get_GAS(payload.subdomain, payload.google_app_script)
+    if (response.status === 200) {
+      let data = []
+      if ('mypage' in response.data) {
+        data = response.data.mypage
+        const template = data.profile.template
+        let cover = '/img/' + template + '/background.webp?v=' + this.$config.NUXT_APP_VERSION
+        if (data.profile.background !== null && data.profile.background !== ''){
+            cover = data.profile.background
+        }
+        let avatar = '/img/' + template + '/avatar.webp?v=' + this.$config.NUXT_APP_VERSION
+        if (data.profile.avatar !== null && data.profile.avatar !== ''){
+            avatar = data.profile.avatar
+        }
+        commit('SET_PRODUCT_ITEMS', data.product)
+        commit('SET_CATEGORY_ARRAY', data.category)
+        commit('SET_MYPAGE_PROFILE', {
+          page_template: data.profile.template,
+          page_name: data.profile.page_name,
+          page_description: data.profile.page_description,
+          cover_image: cover,
+          avatar_image: avatar,
+          facebook_url: data.profile.facebook_url,
+          instagram_url: data.profile.instagram_url,
+          tiktok_url: data.profile.tiktok_url,
+          product_placeholder: '/img/' + template + '/product-placeholder.jpg?v=' + this.$config.NUXT_APP_VERSION
+        })
+        if ('language' in data.profile && data.profile.language !== null && data.profile.language !== ''){
+          const language = data.profile.language.toLowerCase()
+          dispatch('i18n/setLang', language, { root: true })
+          dispatch('basic/setHTMLLang', language, { root: true })
+        }
+        let layout = 'Layout1Index'
+        switch(template) {
+          case 'style1':
+          case 'style2':
+          case 'style3':
+              layout = 'Layout1Index'
+              break;
+          case 'style4':
+          case 'style5':
               layout = 'Layout2Index'
               break;
           default:

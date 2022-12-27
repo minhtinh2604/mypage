@@ -18,7 +18,13 @@ export default {
   },
 
   async asyncData({ store, req, route, error }){
-    const res = await store.dispatch('my_page/getMyPageData', { 'subdomain': store.getters['my_page/getMyPageDomain'], 'mock_api': route.query.mock_api }) 
+    let res = false
+    if (route.query.mock_api){
+      res = await store.dispatch('my_page/getMyPageData', { 'subdomain': store.getters['my_page/getMyPageDomain'], 'mock_api': route.query.mock_api }) 
+    }
+    if (route.query.google_app_script){
+      res = await store.dispatch('my_page/getMyPageData_GAS', { 'subdomain': store.getters['my_page/getMyPageDomain'], 'google_app_script': route.query.google_app_script }) 
+    }
     if (res === false){  error({ statusCode: 404, message: 'Page not found' }) }
   },
 
@@ -86,9 +92,12 @@ export default {
       document.getElementsByTagName('head')[0].appendChild(css_link);
     }
     this.show_spinner = false
+    this.storeToken("aasdasqwwrwe")
   },
   methods: {
-
+    storeToken(token){
+       localStorage.setItem("authToken", token);
+    }
   }
 }
 </script>

@@ -4,6 +4,7 @@ export default function ({ $axios, redirect }) {
     console.log('Making request to: ' + config.baseURL + config.url)
   })
   $axios.onError(error => {
+    console.log(error)
     const code = parseInt(error.response && error.response.status)
     if (code === 404) {
       redirect('/404')
